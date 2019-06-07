@@ -1,0 +1,12 @@
+version: "3"
+services:
+    v2ray:
+        image: v2ray/official
+        restart: always
+        ports: 
+          - 18001:18001/udp
+          - 18001:18001/tcp
+        volumes: 
+          - /home/ye/SystemConfig/v2ray:/etc/v2ray
+          - /home/ye/SystemConfig/v2ray:/var/log/v2ray/
+          - /etc/localtime:/etc/localtime
